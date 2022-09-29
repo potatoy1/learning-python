@@ -1,0 +1,12 @@
+# 구구단을 짜시오
+
+def gugudan(a):
+    # for i in range(a):
+        for i in range(1,10):
+            print(a * i)
+
+            
+
+
+
+gugudan(4)

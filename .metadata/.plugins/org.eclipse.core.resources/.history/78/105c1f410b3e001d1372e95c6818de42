@@ -1,0 +1,21 @@
+# 홀/짝을 입력하시오    홀
+# 나: 홀
+# 컴: 홀
+# 결과: 승리 패배
+from random import random
+
+player = input("홀/짝을 입력하시오")
+
+computer = random()
+
+if computer > 0.5:
+    print("홀")
+else:
+    print("짝")
+
+if (player == "홀" and computer > 0.5) or (player == "짝" and computer < 0.5):
+    print("결과: 승리")
+else :
+    print("결과: 패배")
+       
+        

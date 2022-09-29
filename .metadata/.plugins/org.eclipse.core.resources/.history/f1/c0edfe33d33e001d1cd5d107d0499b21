@@ -1,0 +1,11 @@
+class Byden:
+    def __init__(self):
+        self.ac = 10
+    
+    def makewar(self):
+        self.ac -= 1
+
+class putin:
+    def __init__(self):
+        self.nuclear = 6660
+    def 

@@ -15,7 +15,8 @@ import java.awt.event.MouseEvent;
 public class MySwing02 extends JFrame {
 
 	private JPanel contentPane;
-
+	private JLabel lbl;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -44,7 +45,7 @@ public class MySwing02 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lbl = new JLabel("100");
+		lbl = new JLabel("100");
 		lbl.setBounds(96, 59, 57, 15);
 		contentPane.add(lbl);
 		
@@ -52,9 +53,10 @@ public class MySwing02 extends JFrame {
 		btn.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				int cnt = Integer.parseInt(lbl.getText());
-				cnt -= 1;
-				lbl.setText(String.valueOf(cnt));
+				myclick();
+//				int cnt = Integer.parseInt(lbl.getText());
+//				cnt -= 1;
+//				lbl.setText(String.valueOf(cnt));
 			}
 		});
 		btn.setBounds(230, 55, 97, 23);
@@ -64,5 +66,11 @@ public class MySwing02 extends JFrame {
 		});
 		contentPane.add(btn);
 	}
-
+	
+	public void myclick() {
+		String a = lbl.getText();
+		int aa = Integer.parseInt(a);
+		aa--;
+		lbl.setText(Integer.toString(aa));
+	}
 }

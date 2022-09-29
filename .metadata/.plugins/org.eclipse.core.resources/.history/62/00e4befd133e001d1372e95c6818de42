@@ -1,0 +1,2 @@
+def showDan(dan):
+    print("{}*{}={}".format(dna, 1,1*dan))

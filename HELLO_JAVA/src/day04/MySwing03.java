@@ -8,6 +8,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JButton;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class MySwing03 extends JFrame {
 
@@ -64,7 +66,28 @@ public class MySwing03 extends JFrame {
 		contentPane.add(lbl);
 		
 		JButton btn = new JButton("=");
+		btn.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				myclick();
+//				int num1 = Integer.parseInt(tf01.getText());
+//				int num2 = Integer.parseInt(tf02.getText());
+//				tf01.setText(String.valueOf(num1));
+//				tf02.setText(String.valueOf(num2));
+//				tf03.setText(String.valueOf(num1+num2));
+			}
+		});
 		btn.setBounds(160, 46, 38, 23);
 		contentPane.add(btn);
+	}
+	
+	public void myclick() {
+		String a = tf01.getText();
+		String b = tf02.getText();
+		int aa = Integer.parseInt(a);
+		int bb = Integer.parseInt(b);
+		int sum = aa + bb;
+		
+		tf03.setText(sum+"");
 	}
 }

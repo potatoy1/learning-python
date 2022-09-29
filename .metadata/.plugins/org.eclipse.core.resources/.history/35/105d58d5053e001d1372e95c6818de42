@@ -1,0 +1,13 @@
+# 로또 생성하시오
+from random import random
+
+arr45 = [1,2,3,4,5]
+a = arr45[0]
+b = arr45[1]
+arr45[0] = b
+arr45[1]= a
+
+int(rnd) = random().num
+print(rnd)
+# for i in num:
+#     print(i)

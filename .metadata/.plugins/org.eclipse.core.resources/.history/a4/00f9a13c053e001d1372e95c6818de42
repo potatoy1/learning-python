@@ -1,0 +1,9 @@
+# 로또 생성하시오
+from random import random
+
+num = [1,2,3]
+
+rnd = int(random()).num
+print(rnd)
+# for i in num:
+#     print(i)

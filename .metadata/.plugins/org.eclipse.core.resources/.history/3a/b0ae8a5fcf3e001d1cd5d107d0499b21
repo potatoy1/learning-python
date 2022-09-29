@@ -1,0 +1,4 @@
+from day03.ooptest02 import Car
+c = Car()
+
+print()

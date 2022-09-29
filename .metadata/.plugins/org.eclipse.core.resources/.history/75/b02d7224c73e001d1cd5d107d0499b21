@@ -1,0 +1,9 @@
+class Animal:
+    hungry = 5
+    
+    def timegoby():
+        if hungry > 0 :
+            hungry--
+        
+    def manttnag():
+        hungry = 10;
