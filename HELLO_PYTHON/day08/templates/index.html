@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>str: {{ str }}</h1>
+	<h1>arr: {{ arr }}</h1>
+	<table border=1>
+		<tr>
+			<th> e_id </th>
+			<th> e_name </th>
+			<th> sex </th>
+			<th> addr </th>
+		</tr>
+		{% for i in emps %}
+		<tr> 
+			{% for value in i.values() %}
+			<td>{{value}}</td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>
