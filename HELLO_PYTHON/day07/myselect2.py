@@ -13,4 +13,6 @@ curs.execute(sql)
 rows = curs.fetchall()
 print(rows)     # 전체 rows
 
+curs.close()
 conn.close()
+
