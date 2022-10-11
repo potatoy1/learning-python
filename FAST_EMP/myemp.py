@@ -51,8 +51,8 @@ async def emp_add_act(request: Request, e_id:str= Form(),e_name:str= Form(),sex:
     
     return templates.TemplateResponse("emp_add_act.html", {"request": request,"cnt":cnt})
 
-@app.get("/emp_del_act", response_class=HTMLResponse)
-async def emp_del_act(request: Request, e_id:str):
+@app.post("/emp_del_act", response_class=HTMLResponse)
+async def emp_del_act(request: Request, e_id:str= Form()):
     ed = EmpDao()
     cnt = ed.delete(e_id)
     
