@@ -5,9 +5,10 @@
 <title>test06</title>
 <script type="text/javascript">
 function myclick() {
-	var dan = document.querySelector("#mysel");
-	var nDan = (mysel.options[mysel.selectedIndex].value);
-	var ta = document.querySelector("#myta");
+	var obj_s = document.querySelector("#mysel");
+	var obj_ta = document.querySelector("#myta");
+	var dan = obj_s.value;
+	var idan = parseInt(dan);
 	var txt ="";
 	
 	for(var i=1;i<10;i++) {

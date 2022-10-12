@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script src="js/jquery-3.6.1.js"></script>
 <title>test05</title>
 <style>
 .myit{
@@ -11,11 +12,10 @@
 </style>
 <script type="text/javascript">
 function myclick() {
-	var obj_mine = document.querySelector("#it_mine");
-	var obj_com = document.querySelector("#it_com");
-	var obj_result = document.querySelector("#it_result");
+	$("#it_mine").val();
+	$("#it_com").val();
+	$("#it_result").val();
 	
-	var mine = obj_mine.value;
 	var com = "";
 	var result = "";
 	
@@ -35,6 +35,11 @@ function myclick() {
 	obj_result.value = result;
 	
 }
+$(document).ready(function(){
+    $("#btn").bind("click", function() {
+     	myclick();
+    });
+});
 </script>
 </head>
 <body>
@@ -59,7 +64,7 @@ function myclick() {
 	</tr>
 	<tr>
 		<td colspan="2">
-			<input type="button" value="게임하기" onclick=myclick() />
+			<input type="button" id="btn" value="게임하기"  />
 		</td>
 	</tr>
 </table>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test02</title>
+<script src="js/jquery-3.6.1.js"></script>
+<script type="text/javascript">
+function myclick() {
+	var a = $('#it').val();
+	console.log(a);
+	var aa = parseInt(a);
+	aa += 3;
+		
+	
+}
+$(document).ready(function(){
+    $("#btn").bind("click", function() {
+     	myclick();
+    });
+});
+</script>
+</head>
+<body>
+<input type = "text" id="it" value="200" />
+<input type = "button" id="btn" value="plus3"  />
+</body>
+</html>
