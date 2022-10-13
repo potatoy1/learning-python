@@ -23,13 +23,19 @@ function myclick() {
 		arr45[rnd]=a;
 	}
 	
-	objs[0].innerHTML = arr45[0];
-	objs[1].innerHTML = arr45[1];
-	objs[2].innerHTML = arr45[2];
-	objs[3].innerHTML = arr45[3];
-	objs[4].innerHTML = arr45[4];
-	objs[5].innerHTML = arr45[5];
+	$(".mydiv").eq(0).html(arr45[0]);
+	$(".mydiv").eq(1).html(arr45[1]);
+	$(".mydiv").eq(2).html(arr45[2]);
+	$(".mydiv").eq(3).html(arr45[3]);
+	$(".mydiv").eq(4).html(arr45[4]);
+	$(".mydiv").eq(5).html(arr45[5]);
+	
 }
+$(document).ready(function(){
+    $("#btn").bind("click", function() {
+     	myclick();
+    });
+});
 </script>
 </head>
 <body>
@@ -44,7 +50,7 @@ function myclick() {
 	</tr>
 	<tr>
 		<td colspan="6">
-			<input type="button" value="로또생성하기" onclick=myclick() />
+			<input type="button" id="btn" value="로또생성하기"  />
 		</td>
 	</tr>
 </table>

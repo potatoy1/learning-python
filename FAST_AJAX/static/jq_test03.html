@@ -3,18 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>test03</title>
-<script src="js/jquery-3.6.1.js"></script>
 <style type="text/css">
 .myit{
 	width: 20px
 }
 </style>
+<script src="js/jquery-3.6.1.js"></script>
 <script type="text/javascript">
 function myplus() {
-	var obj1 = document.querySelector("#it1");
-	var obj2 = document.querySelector("#it2");
-	var obj3 = document.querySelector("#it3");
-	
 	var a = $("#it1").val();
 	var b = $("#it2").val();
 	
@@ -22,70 +18,58 @@ function myplus() {
 	var bb = parseInt(b);
 	
 	var cc = aa + bb;
-	obj3.value = cc;
+	$("#it3").val(cc);
 }
 
 function myminus() {
-	var obj1 = document.querySelector("#it1");
-	var obj2 = document.querySelector("#it2");
-	var obj3 = document.querySelector("#it3");
-	
-	var a = obj1.value;
-	var b = obj2.value;
+	var a = $("#it1").val();
+	var b = $("#it2").val();
 	
 	var aa = parseInt(a);
 	var bb = parseInt(b);
 	
 	var cc = aa - bb;
-	obj3.value = cc;
+	$("#it3").val(cc);
 }
 
 function mymultiply() {
-	var obj1 = document.querySelector("#it1");
-	var obj2 = document.querySelector("#it2");
-	var obj3 = document.querySelector("#it3");
-	
-	var a = obj1.value;
-	var b = obj2.value;
+	var a = $("#it1").val();
+	var b = $("#it2").val();
 	
 	var aa = parseInt(a);
 	var bb = parseInt(b);
 	
 	var cc = aa * bb;
-	obj3.value = cc;
+	$("#it3").val(cc);
 }
 
 function mydivide() {
-	var obj1 = document.querySelector("#it1");
-	var obj2 = document.querySelector("#it2");
-	var obj3 = document.querySelector("#it3");
-	
-	var a = obj1.value;
-	var b = obj2.value;
+	var a = $("#it1").val();
+	var b = $("#it2").val();
 	
 	var aa = parseInt(a);
 	var bb = parseInt(b);
 	
 	var cc = aa / bb;
-	obj3.value = cc;
+	$("#it3").val(cc);
 }
 $(document).ready(function(){
-    $("#btn1").bind("click", function() {
+    $("#btn_plus").bind("click", function() {
     	myplus();
     });
 });
 $(document).ready(function(){
-    $("#btn2").bind("click", function() {
+    $("#btn_minus").bind("click", function() {
     	myminus();
     });
 });
 $(document).ready(function(){
-    $("#btn3").bind("click", function() {
+    $("#btn_multiply").bind("click", function() {
     	mymultiply();
     });
 });
 $(document).ready(function(){
-    $("#btn4").bind("click", function() {
+    $("#btn_divide").bind("click", function() {
     	mydivide();
     });
 });
@@ -98,10 +82,10 @@ $(document).ready(function(){
 			<input type="text" id="it1" class="myit"/>
 		</td>
 		<td>
-			<input type="button" id="btn1" value="plus" /><br>
-			<input type="button" id="btn2" value="minus" /><br>
-			<input type="button" id="btn3" value="multiply"  /><br>
-			<input type="button" id="btn4" value="divide"  />
+			<input type="button" id="btn_plus" value="plus" /><br>
+			<input type="button" id="btn_minus" value="minus" /><br>
+			<input type="button" id="btn_multiply" value="multiply"  /><br>
+			<input type="button" id="btn_divide" value="divide"  />
 		</td>
 		<td>
 			<input type="text" id="it2" class="myit"/>

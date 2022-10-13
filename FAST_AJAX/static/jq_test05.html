@@ -2,7 +2,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script src="js/jquery-3.6.1.js"></script>
 <title>test05</title>
 <style>
 .myit{
@@ -10,12 +9,14 @@
 }
 
 </style>
+<script src="js/jquery-3.6.1.js"></script>
 <script type="text/javascript">
 function myclick() {
 	$("#it_mine").val();
 	$("#it_com").val();
 	$("#it_result").val();
 	
+	var mine = $("#it_mine").val();
 	var com = "";
 	var result = "";
 	
@@ -31,8 +32,8 @@ function myclick() {
 	}else {
 		result = "패배";
 	}
-	obj_com.value = com;
-	obj_result.value = result;
+	$("#it_com").val(com);
+	$("#it_result").val(result);
 	
 }
 $(document).ready(function(){
