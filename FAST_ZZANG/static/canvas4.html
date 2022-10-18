@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var str="1,0,1,0,1,1,1,0,0,0,0,1,1,1,0,0";
+var arr= str.split(",");
+function myinit(){
+	var c = document.getElementById("mycan");
+	var ctx = c.getContext("2d");
+	for(var i=0;i<4;i++){
+		for(var j=0;j<4;j++){
+			console.log(arr[i*4+j]);
+			if(arr[i*4+j]==0){
+				ctx.fillStyle = 'black';
+			}else{
+				ctx.fillStyle = 'blue';
+			}
+		    ctx.fillRect(j*101, i*101, 100, 100);
+		}
+	}
+
+//     ctx.fillStyle = 'yellow';
+//     ctx.fillRect(10, 150, 100, 100);
+
+}
+
+</script>
+
+</head>
+<body onload="myinit()">
+
+<canvas id = "mycan" width="400px" height="400px"  >
+
+
+</canvas>
+</body>
+</html>
