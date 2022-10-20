@@ -61,7 +61,7 @@ ws.onmessage = function(event) {
 		reiv_display(arr_txt[1],arr_txt[2]);
 	}	
 	if(arr_txt[0]=="win"){
-		reiv_ready(arr_txt[1]);
+		reiv_win(arr_txt[1]);
 		console.log(arr_txt[1]);
 	}
 	
@@ -131,7 +131,7 @@ function sendMessage(txt) {
 }
 
 function myinit(){
-	//shuffle();
+	shuffle();
 	patchIJEvent();
 }
 function setDsp2D(){
@@ -214,9 +214,9 @@ function gostep3(){
 	var obj_user = document.querySelector("#user");
 	sendMessage("score:"+obj_user.value+":"+(16-cnt_final));
 	sendMessage("display:"+obj_user.value+":"+(cvr2D+""));
-	sendMessage("win:"+obj_user.value);
 	
 	if(cnt_final==16){
+		sendMessage("win:"+obj_user.value);
 		flag_ing = false;
 		alert("당신이 이겼습니다.");
 		reiv_win();
